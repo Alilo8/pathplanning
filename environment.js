@@ -8,7 +8,7 @@ export default class Env{
         this.end = end;
 
         const loader = new GLTFLoader();
-        loader.load('../3d_models/collision-world.glb', (gltf) => {
+        loader.load('3d_models/collision-world.glb', (gltf) => {
             this.model = gltf;
             gltf.scene.position.set(-10, 0, 0);
             gltf.scene.scale.set(5, 5, 5);
@@ -50,9 +50,9 @@ export default class Env{
 
         const slice = mapName.slice(0, 6)
         if(slice == 'Random')
-            eval('this.'+slice+"('"+mapName+"')");
+            Function('this.'+slice+"('"+mapName+"')");
         else
-            eval('this.'+mapName+'()');
+            Function('this.'+mapName+'()');
 
         return [this.instancedMesh, this.obstacles]
     }
