@@ -19,8 +19,6 @@ export default class Env{
         //         }
         //     })
         // });
-    }
-    initGeometry(mapName){
         const plane_geom = new THREE.PlaneGeometry(1000, 1000);
         plane_geom.rotateX(-Math.PI / 2)
         const plane_mat = new THREE.MeshMatcapMaterial({color: 0x967b00});
@@ -46,13 +44,14 @@ export default class Env{
         mesh.setColorAt(1, color.setHex(0xFF0000));
         this.seMesh = mesh;
         this.scene.add(mesh);
-
-        const slice = mapName.slice(0, 6)
-        if(slice == 'Random')
-            Function('this.'+slice+"('"+mapName+"')");
-        else
-            Function('this.'+mapName+'()');
-
+    }
+    initGeometry(mapName){
+        if(mapName == "New Random Cubes"){
+            this.NewRandomCubes();
+        }
+        else if(mapName == "Structured Cubes"){
+            this.StructuredCubes();
+        }
         return [this.instancedMesh, this.obstacles]
     }
     NewRandomCubes(){
