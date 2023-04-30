@@ -26,7 +26,7 @@ class Simulator{
         this.initCamera();
         this.initAction();
         this.env = new Env(this.scene, this.start, this.end);
-        [this.obstacles_mesh, this.obstacles] = this.env.initGeometry('NewRandomCubes');
+        [this.obstacles_mesh, this.obstacles] = this.env.initGeometry('New Random Cubes');
     }
     getWinSize(){
         this.winSize = {
@@ -48,7 +48,7 @@ class Simulator{
         this.props = {
             Simulation: true,
             Speed: 100,
-            Env: 'Random2',
+            Env: 'New Random Cubes',
             Algo: 'RBT',
             Apply: function() {
                 self.onApply();
@@ -82,7 +82,7 @@ class Simulator{
 
         settings.add(this.props, 'Simulation');
         settings.add(this.props, 'Speed', 1, 200);
-        settings.add(this.props, 'Env', [ 'New Random Cubes', 'Structured Cubes', 'Random1', 'Random2']);
+        settings.add(this.props, 'Env', [ 'New Random Cubes', 'Structured Cubes']);
         settings.add(this.props, 'Apply');
         settings.add(this.props, 'Algo', [ 'Astar', 'RRT', 'RBT']);
         settings.add(this.props, 'Run');
@@ -98,7 +98,7 @@ class Simulator{
         if (this.algo){
             this.algo.dispose();
         }
-        [this.obstacles_mesh, this.obstacles] = this.env.initGeometry(this.props.Env.replace(/ /g, ''));
+        [this.obstacles_mesh, this.obstacles] = this.env.initGeometry(this.props.Env);
     }
     onRun(){
         if (this.algo){
