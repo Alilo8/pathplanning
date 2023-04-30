@@ -1,11 +1,11 @@
-import * as THREE from 'https://unpkg.com/three@0.152.2/build/three.module.js';
-import Stats from 'https://unpkg.com/three@0.152.2/examples/jsm/libs/stats.module.js';
-import { GUI } from 'https://unpkg.com/three@0.152.2/examples/jsm/libs/lil-gui.module.min.js';
-import { OrbitControls } from 'https://unpkg.com/three@0.152.2/examples/jsm/controls/OrbitControls.js';
-import Env from './environment.js';
-import Astar from './astar.js';
-import RRT from './rrt.js';
-import RBT from './rbt.js';
+import * as THREE from "https://unpkg.com/three@0.152.2/build/three.module.js";
+import Stats from "https://unpkg.com/three@0.152.2/examples/jsm/libs/stats.module.js";
+import { GUI } from "https://unpkg.com/three@0.152.2/examples/jsm/libs/lil-gui.module.min.js";
+import { OrbitControls } from "https://unpkg.com/three@0.152.2/examples/jsm/controls/OrbitControls.js";
+import Env from "./environment.js";
+import Astar from "./astar.js";
+import RRT from "./rrt.js";
+import RBT from "./rbt.js";
 
 class Simulator{
     constructor(){
