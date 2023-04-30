@@ -1,4 +1,4 @@
-import * as THREE from 'https://unpkg.com/browse/three@0.152.2/build/three.module.js';
+import * as THREE from 'three';
 
 export default class RRT{
     constructor(scene, sizes, start, end, obstacles, simulation){
