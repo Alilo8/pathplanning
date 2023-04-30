@@ -1,5 +1,5 @@
-import * as THREE from 'three';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import * as THREE from 'https://unpkg.com/browse/three@0.152.2/build/three.module.js';
+import { GLTFLoader } from 'https://unpkg.com/browse/three@0.152.2/examples/jsm/loaders/GLTFLoader.js';
 
 export default class Env{
     constructor(scene, start, end){

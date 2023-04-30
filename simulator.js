@@ -1,7 +1,7 @@
-import * as THREE from 'three';
-import Stats from 'three/examples/jsm/libs/stats.module.js';
-import { GUI } from 'three/examples/jsm/libs/lil-gui.module.min.js';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import * as THREE from "https://unpkg.com/browse/three@0.152.2/build/three.module.js";
+import Stats from 'https://unpkg.com/browse/three@0.152.2/examples/jsm/libs/stats.module.js';
+import { GUI } from 'https://unpkg.com/browse/three@0.152.2/examples/jsm/libs/lil-gui.module.min.js';
+import { OrbitControls } from 'https://unpkg.com/browse/three@0.152.2/examples/jsm/controls/OrbitControls.js';
 import Env from './environment.js';
 import Astar from './astar.js';
 import RRT from './rrt.js';

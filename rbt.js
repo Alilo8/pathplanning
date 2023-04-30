@@ -1,4 +1,4 @@
-import * as THREE from 'three';
+import * as THREE from 'https://unpkg.com/browse/three@0.152.2/build/three.module.js';
 
 export default class RBT{
     constructor(scene, sizes, start, end, obstacles_mesh, obstacles, simulation){
