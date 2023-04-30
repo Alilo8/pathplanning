@@ -6,19 +6,19 @@ export default class Env{
         this.start = start;
         this.end = end;
 
-        const loader = new GLTFLoader();
-        loader.load('./3d_models/collision-world.glb', (gltf) => {
-            this.model = gltf;
-            gltf.scene.position.set(-10, 0, 0);
-            gltf.scene.scale.set(5, 5, 5);
-            // console.log(gltf.scene.children[0]);
-            gltf.scene.children[0].material.transparent = true;
-            gltf.scene.traverse(child => {
-                if (child.isMesh){
-                    // console.log(child);
-                }
-            })
-        });
+        // const loader = new GLTFLoader();
+        // loader.load('./3d_models/collision-world.glb', (gltf) => {
+        //     this.model = gltf;
+        //     gltf.scene.position.set(-10, 0, 0);
+        //     gltf.scene.scale.set(5, 5, 5);
+        //     // console.log(gltf.scene.children[0]);
+        //     gltf.scene.children[0].material.transparent = true;
+        //     gltf.scene.traverse(child => {
+        //         if (child.isMesh){
+        //             // console.log(child);
+        //         }
+        //     })
+        // });
     }
     initGeometry(mapName){
         const plane_geom = new THREE.PlaneGeometry(1000, 1000);
